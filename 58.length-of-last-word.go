@@ -5,8 +5,18 @@
  */
 
 // @lc code=start
-func lengthOfLastWord(s string) int {
-    
-}
-// @lc code=end
+package main
 
+// import (
+// 	"fmt"
+// 	"strings"
+// )
+
+// func main() { lengthOfLastWord("   fly me   to   the moon  ") }
+func lengthOfLastWord(s string) int {
+	str:= strings.TrimSpace(s)
+	arrOfWords := strings.Split(str, " ")
+	return len(arrOfWords[len(arrOfWords)-1])
+}
+
+// @lc code=end
